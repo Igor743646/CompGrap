@@ -13,4 +13,3 @@ C:\Users\Igor\source\repos\Lab1\Lab1\obj\Debug\Lab1.csproj.GenerateResource.cach
 C:\Users\Igor\source\repos\Lab1\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
 C:\Users\Igor\source\repos\Lab1\Lab1\obj\Debug\Lab1.exe
 C:\Users\Igor\source\repos\Lab1\Lab1\obj\Debug\Lab1.pdb
-C:\Users\Igor\source\repos\Lab1\Lab1\obj\Debug\GeneratedInternalTypeHelper.g.cs
