@@ -12,7 +12,7 @@
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
-        <Grid x:Name="CanvasGrid"  Grid.Column="0" MouseWheel="CanvasGrid_MouseWheel" MouseDown="CanvasGrid_MouseDown" MouseUp="CanvasGrid_MouseUp" MouseMove="CanvasGrid_MouseMove">
+        <Grid x:Name="CanvasGrid"  Grid.Column="0" MouseWheel="CanvasGrid_MouseWheel" MouseDown="CanvasGrid_MouseDown" MouseUp="CanvasGrid_MouseUp" MouseMove="CanvasGrid_MouseMove" SizeChanged="CanvasGrid_SizeChanged">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50*"/>
                 <ColumnDefinition Width="50*"/>

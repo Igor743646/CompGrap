@@ -265,5 +265,16 @@ namespace Lab1
                 LastPosition = new Point(e.GetPosition(Canvas).X, e.GetPosition(Canvas).Y);
             }
         }
+
+        private void CanvasGrid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            foreach (object UIelement in Canvas.Children)
+            {
+                if (UIelement is Line line)
+                {
+                    FixAxises(line);
+                }
+            }
+        }
     }
 }
