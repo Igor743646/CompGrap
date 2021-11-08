@@ -1,0 +1,373 @@
+﻿<Window x:Class="Lab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1"
+        mc:Ignorable="d"
+        Title="CG labs" Height="800" 
+        Width="800" 
+        WindowState="Normal" 
+        ResizeMode="CanResize" 
+        MinHeight="450" MinWidth="650" 
+        MouseLeftButtonUp="CanvasGrid_MouseLeftButtonUp" 
+        MouseRightButtonUp="CanvasGrid_MouseRightButtonUp">
+    <Grid x:Name="MainGrid" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="CanvasGrid"  Grid.Column="0" 
+              MouseWheel="CanvasGrid_MouseWheel" 
+              MouseLeftButtonDown="CanvasGrid_MouseLeftButtonDown" 
+              MouseLeftButtonUp="CanvasGrid_MouseLeftButtonUp"
+              MouseRightButtonDown="CanvasGrid_MouseRightButtonDown"
+              MouseRightButtonUp="CanvasGrid_MouseRightButtonUp"
+              MouseMove="CanvasGrid_MouseMove"
+              SizeChanged="CanvasGrid_SizeChanged">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF003655" Offset="0"/>
+                    <GradientStop Color="#FF002439" Offset="1"/>
+                </RadialGradientBrush>
+            </Grid.Background>
+
+            <Canvas x:Name="Canvas" Grid.Column="1" Grid.Row="1" >
+                <Polygon>
+                    <Polygon.Fill>
+                        <RadialGradientBrush GradientOrigin="0,0">
+                            <GradientStop Color="Lime" Offset="0"/>
+                            <GradientStop Color="#0000FF00" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Polygon.Fill>
+                    <Polygon.Points>
+                        <Point X="0" Y="0"></Point>
+                        <Point X="50" Y="200"></Point>
+                        <Point X="200" Y="100"></Point>
+                        <Point X="120" Y="30"></Point>
+                    </Polygon.Points>
+                </Polygon>
+                <Polygon>
+                    <Polygon.Fill>
+                        <RadialGradientBrush GradientOrigin="1,0.5">
+                            <GradientStop Color="Red" Offset="0"/>
+                            <GradientStop Color="#00FF0000" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Polygon.Fill>
+                    <Polygon.Points>
+                        <Point X="0" Y="0"></Point>
+                        <Point X="50" Y="200"></Point>
+                        <Point X="200" Y="100"></Point>
+                        <Point X="120" Y="30"></Point>
+                    </Polygon.Points>
+                </Polygon>
+                <Polygon>
+                    <Polygon.Fill>
+                        <RadialGradientBrush GradientOrigin="0,1" Center="0.3,0.9">
+                            <GradientStop Color="Blue" Offset="0.009"/>
+                            <GradientStop Color="#000000FF" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Polygon.Fill>
+                    <Polygon.Points>
+                        <Point X="0" Y="0"></Point>
+                        <Point X="50" Y="200"></Point>
+                        <Point X="200" Y="100"></Point>
+                        <Point X="120" Y="30"></Point>
+                    </Polygon.Points>
+                </Polygon>
+                <Polygon>
+                    <Polygon.Fill>
+                        <RadialGradientBrush GradientOrigin="0.6,0.1" Center="0.5,0.5">
+                            <GradientStop Color="#FF00FFF3" Offset="0.009"/>
+                            <GradientStop Color="#0000FFF3" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Polygon.Fill>
+                    <Polygon.Points>
+                        <Point X="0" Y="0"></Point>
+                        <Point X="50" Y="200"></Point>
+                        <Point X="200" Y="100"></Point>
+                        <Point X="120" Y="30"></Point>
+                    </Polygon.Points>
+                </Polygon>
+                <Polygon>
+                    <Polygon.Fill>
+                        <RadialGradientBrush GradientOrigin="0,1">
+                            <GradientStop Color="Lime" Offset="0"/>
+                            <GradientStop Color="#0000FF00" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Polygon.Fill>
+                    <Polygon.Points>
+                        <Point X="0" Y="0"></Point>
+                        <Point X="50" Y="-200"></Point>
+                        <Point X="200" Y="-100"></Point>
+                        <Point X="120" Y="30"></Point>
+                    </Polygon.Points>
+                </Polygon>
+                <Polygon>
+                    <Polygon.Fill>
+                        <RadialGradientBrush GradientOrigin="0.6,1" Center="0.5,0.5">
+                            <GradientStop Color="#FF00FFF3" Offset="0.009"/>
+                            <GradientStop Color="#3F00FFF3" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Polygon.Fill>
+                    <Polygon.Points>
+                        <Point X="0" Y="0"></Point>
+                        <Point X="50" Y="-200"></Point>
+                        <Point X="200" Y="-100"></Point>
+                        <Point X="120" Y="30"></Point>
+                    </Polygon.Points>
+                </Polygon>
+                <Polygon>
+                    <Polygon.Fill>
+                        <RadialGradientBrush GradientOrigin="0.6,1">
+                            <GradientStop Color="Red" Offset="0"/>
+                            <GradientStop Color="#00FF0000" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Polygon.Fill>
+                    <Polygon.Points>
+                        <Point X="120" Y="30"></Point>
+                        <Point X="200" Y="-100"></Point>
+                        <Point X="250" Y="20"></Point>
+                        <Point X="200" Y="100"></Point>
+                    </Polygon.Points>
+                </Polygon>
+                <Polygon>
+                    <Polygon.Fill>
+                        <RadialGradientBrush GradientOrigin="0,0.65" Center="0.5,0.5">
+                            <GradientStop Color="#FF00FFF3" Offset="0.009"/>
+                            <GradientStop Color="#3F00FFF3" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Polygon.Fill>
+                    <Polygon.Points>
+                        <Point X="120" Y="30"></Point>
+                        <Point X="200" Y="-100"></Point>
+                        <Point X="250" Y="20"></Point>
+                        <Point X="200" Y="100"></Point>
+                    </Polygon.Points>
+                </Polygon>
+            </Canvas>
+        </Grid>
+
+        <Rectangle Grid.Column="1" Fill="#FFC9CACD"/>
+
+        <ScrollViewer Grid.Column="1" Margin="0,655,0,0" VerticalScrollBarVisibility="Hidden">
+            <TextBlock x:Name="DebugTextBlock" 
+                       HorizontalAlignment="Left" 
+                       Margin="10,0,0,10" 
+                       TextWrapping="Wrap" 
+                       Text="..." 
+                       VerticalAlignment="Bottom"
+                       LineHeight="10"
+                       Width="Auto"
+                       Height="Auto"
+                       />
+        </ScrollViewer>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Margin="10,0,10,1" FontSize="14"><Run Text="Параметры параболоида: "/></TextBlock>
+
+                <TextBlock Grid.Row="1" Margin="6,3,181,2">H:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="H" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="75" Margin="19,2,0,0" TextChanged="H_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="102,3,85,2" RenderTransformOrigin="4.923,0.412">K:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="K" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="75" Margin="115,2,0,0" TextChanged="K_TextChanged"/>
+
+                <TextBlock Grid.Row="2" Margin="6,5,166,0">dphi:</TextBlock>
+                <TextBox Grid.Row="2" x:Name="dphi" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="69" Margin="121,4,0,0" TextChanged="Dphi_TextChanged"/>
+                <TextBlock Grid.Row="2" Margin="102,5,79,0">dh:</TextBlock>
+                <TextBox Grid.Row="2" x:Name="dh" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="60" Margin="34,4,0,0" TextChanged="Dh_TextChanged"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Margin="10,0,10,1" FontSize="14"><Run Text="Вращение: "/></TextBlock>
+                <TextBlock Grid.Row="1" Margin="6,4,181,0">X:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="RotateX" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="19,4,0,0" TextChanged="RotateX_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="68,5,121,0">Y:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="RotateY" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="79,4,0,0" TextChanged="RotateY_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="130,5,56,0">Z:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="RotateZ" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="46" Margin="144,4,0,0" TextChanged="RotateZ_TextChanged"/>
+
+            </Grid>
+
+            <Grid Grid.Row="2">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Margin="10,0,10,1" FontSize="14"><Run Text="Масштабирование: "/></TextBlock>
+                <TextBlock Grid.Row="1" Margin="6,4,181,0">X:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="ScaleX" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="46" Margin="19,4,0,0" TextChanged="ScaleX_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="68,5,121,0">Y:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="ScaleY" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="46" Margin="79,4,0,0" TextChanged="ScaleY_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="130,5,56,0">Z:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="ScaleZ" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="46" Margin="144,4,0,0" TextChanged="ScaleZ_TextChanged"/>
+            </Grid>
+
+            <Grid Grid.Row="3">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Margin="10,0,10,1" FontSize="14"><Run Text="Перенос по осям: "/></TextBlock>
+                <TextBlock Grid.Row="1" Margin="6,4,181,0">X:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="TranslationX" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="19,4,0,0" TextChanged="TranslationX_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="68,5,121,0">Y:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="TranslationY" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="79,4,0,0" TextChanged="TranslationY_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="130,5,56,0">Z:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="TranslationZ" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="144,4,0,0" TextChanged="TranslationZ_TextChanged"/>
+            </Grid>
+
+            <ComboBox Grid.Row="4" x:Name="ProjectionMode" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Width="180" SelectedIndex="3" Height="23" SelectionChanged="ProjectionMode_SelectionChanged">
+                <TextBlock>Вид спереди</TextBlock>
+                <TextBlock>Вид сбоку</TextBlock>
+                <TextBlock>Вид сверху</TextBlock>
+                <TextBlock>Изометрическая</TextBlock>
+                <TextBlock>Свободная</TextBlock>
+            </ComboBox>
+
+            <ComboBox Grid.Row="5" x:Name="DrawMode" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Width="180" SelectedIndex="0" Height="23" SelectionChanged="DrawMode_SelectionChanged">
+                <TextBlock>Каркас</TextBlock>
+                <TextBlock>Каркас с удалением невидимых линий</TextBlock>
+                <TextBlock>Полигоны с сплошной заливкой</TextBlock>
+                <TextBlock>Полигоны с случайной заливкой</TextBlock>
+                <TextBlock>Плоская модель затенения</TextBlock>
+                <TextBlock>Модель Гуро</TextBlock>
+            </ComboBox>
+
+            <CheckBox Grid.Row="6" x:Name="ViewNormalsBox" Content="Отобразить нормали" VerticalAlignment="Center" Height="19" Margin="10,10,10,6" Checked="ViewNormalsBox_Checked" Unchecked="ViewNormalsBox_Checked" />
+
+            <Grid Grid.Row="7">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Margin="10,0,10,1" FontSize="14"><Run Text="Цвет фигуры: "/></TextBlock>
+                <TextBlock Grid.Row="1" Margin="6,4,181,0">R:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="R" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="19,4,0,0" TextChanged="R_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="68,5,121,0">G:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="G" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="79,4,0,0" TextChanged="G_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="130,5,56,0">B:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="B" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="144,4,0,0" TextChanged="B_TextChanged"/>
+            </Grid>
+
+            <Grid Grid.Row="8">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Margin="10,8,10,6" FontSize="14"><Run Text="Параметры источника "/><LineBreak/><Run Text="света: "/></TextBlock>
+                <TextBlock Grid.Row="1" Margin="6,5,185,7">X:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="P_X" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="19,4,0,0" TextChanged="P_X_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="68,5,123,7">Y:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="P_Y" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="79,4,0,0" TextChanged="P_Y_TextChanged"/>
+                <TextBlock Grid.Row="1" Margin="130,5,61,7">Z:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="P_Z" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="144,4,0,0" TextChanged="P_Z_TextChanged"/>
+
+                <TextBlock Grid.Row="2" Margin="6,5,185,3">Ia</TextBlock>
+                <TextBox Grid.Row="2" x:Name="Ia_X" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="19,4,0,0" TextChanged="Ia_X_TextChanged"/>
+                <TextBox Grid.Row="2" x:Name="Ia_Y" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="79,4,0,0" TextChanged="Ia_Y_TextChanged"/>
+                <TextBox Grid.Row="2" x:Name="Ia_Z" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="144,4,0,0" TextChanged="Ia_Z_TextChanged"/>
+
+                <TextBlock Grid.Row="3" Margin="6,5,185,7">Il</TextBlock>
+                <TextBox Grid.Row="3" x:Name="Il_X" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="19,4,0,0" TextChanged="Il_X_TextChanged"/>
+                <TextBox Grid.Row="3" x:Name="Il_Y" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="79,4,0,0" TextChanged="Il_Y_TextChanged"/>
+                <TextBox Grid.Row="3" x:Name="Il_Z" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="144,4,0,0" TextChanged="Il_Z_TextChanged"/>
+
+            </Grid>
+
+            <Grid Grid.Row="9">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Margin="10,8,10,0" FontSize="14"><Run Text="Параметры материала:"/></TextBlock>
+
+                <TextBlock Grid.Row="1" Margin="9,1,175,1">p:</TextBlock>
+                <TextBox Grid.Row="1" x:Name="P" HorizontalAlignment="Left" Height="18"  TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="167" Margin="26,1,0,0" TextChanged="P_TextChanged"/>
+
+                <TextBlock Grid.Row="2" Margin="6,5,178,7">Ka</TextBlock>
+                <TextBox Grid.Row="2" x:Name="Ka_X" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="26,4,0,6" TextChanged="Ka_X_TextChanged"/>
+                <TextBox Grid.Row="2" x:Name="Ka_Y" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0,1" VerticalAlignment="Top" Width="46" Margin="86,4,0,0" TextChanged="Ka_Y_TextChanged"/>
+                <TextBox Grid.Row="2" x:Name="Ka_Z" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="147,4,0,0" TextChanged="Ka_Z_TextChanged"/>
+
+                <TextBlock Grid.Row="3" Margin="6,5,178,3">Kd</TextBlock>
+                <TextBox Grid.Row="3" x:Name="Kd_X" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="26,4,0,0" TextChanged="Kd_X_TextChanged"/>
+                <TextBox Grid.Row="3" x:Name="Kd_Y" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="86,4,0,0" TextChanged="Kd_Y_TextChanged"/>
+                <TextBox Grid.Row="3" x:Name="Kd_Z" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="147,4,0,0" TextChanged="Kd_Z_TextChanged"/>
+
+                <TextBlock Grid.Row="4" Margin="6,5,178,7">Ks</TextBlock>
+                <TextBox Grid.Row="4" x:Name="Ks_X" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46" Margin="26,4,0,0" TextChanged="Ks_X_TextChanged"/>
+                <TextBox Grid.Row="4" x:Name="Ks_Y" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="86,4,0,0" TextChanged="Ks_Y_TextChanged"/>
+                <TextBox Grid.Row="4" x:Name="Ks_Z" HorizontalAlignment="Left" Height="20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="46" Margin="147,4,0,0" TextChanged="Ks_Z_TextChanged"/>
+
+            </Grid>
+
+            <Grid Grid.Row="10">
+                <TextBlock Margin="5,3,174,-1">md:</TextBlock>
+                <TextBox x:Name="MD" HorizontalAlignment="Left" Height="18"  TextWrapping="Wrap" Text="0,34" VerticalAlignment="Top" Width="167" Margin="26,3,0,0" TextChanged="MD_TextChanged"/>
+            </Grid>
+
+            <Grid Grid.Row="11">
+                <TextBlock Margin="5,3,174,-1">mk:</TextBlock>
+                <TextBox x:Name="MK" HorizontalAlignment="Left" Height="18"  TextWrapping="Wrap" Text="0,35" VerticalAlignment="Top" Width="167" Margin="26,3,0,0" TextChanged="MK_TextChanged"/>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>
